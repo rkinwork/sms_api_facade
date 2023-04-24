@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  lint:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    profiles:
+      - tests
+    volumes:
+      - ./src:/src
+      - ./tests:/tests
+    command:
+      - "bash"
+      - "-c"
+      - "flake8 --config /tests/setup.cfg /src "
+
+
+
+
+
