@@ -56,3 +56,4 @@ celerybeat-schedule
 
 #env
 .env
+nums.txt
