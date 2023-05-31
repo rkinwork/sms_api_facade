@@ -22,8 +22,6 @@ class SmscApiError(Exception):
     """Common error for smsc problems."""
 
 
-
-
 @click.command()
 @click.argument('numbers_src', type=click.File('r'))
 @click.option('sms_text', '-m', required=True, multiple=True)
@@ -58,6 +56,17 @@ async def send(
 
 
 async def request_smsc(
+        http_method: str,
+        api_method: str,
+        *,
+        login: str,
+        password: str,
+        payload: dict = None,
+) -> dict:
+    return {'id': 340, 'cnt': 1}
+
+
+async def request_smsc_old(
         http_method: str,
         api_method: str,
         *,
