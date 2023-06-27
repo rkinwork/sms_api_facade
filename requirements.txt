@@ -7,3 +7,4 @@ pytest-trio==0.8.0
 wemake-python-styleguide==0.17.0
 loguru==0.7.0
 quart-trio==0.10.0
+quart_schema==0.16.0

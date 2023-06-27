@@ -1,7 +1,7 @@
 import http
 
-import asyncclick as click
 import asks
+import asyncclick as click
 import trio
 
 DEFAULT_SMS_TTL = '01:00'
@@ -55,18 +55,18 @@ async def send(
     click.echo(response)
 
 
+# async def request_smsc(
+#         http_method: str,
+#         api_method: str,
+#         *,
+#         login: str,
+#         password: str,
+#         payload: dict = None,
+# ) -> dict:
+#     return {'id': 340, 'cnt': 1}
+
+
 async def request_smsc(
-        http_method: str,
-        api_method: str,
-        *,
-        login: str,
-        password: str,
-        payload: dict = None,
-) -> dict:
-    return {'id': 340, 'cnt': 1}
-
-
-async def request_smsc_old(
         http_method: str,
         api_method: str,
         *,
